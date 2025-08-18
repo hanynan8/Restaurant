@@ -1,0 +1,821 @@
+[
+  {
+    "contact": {
+      "watsapp": "https://wa.me/20123456789"
+    },
+    "id": "grill",
+    "name": "المشويات",
+    "items": [
+      {
+        "id": 1,
+        "name": "شيش طاووق",
+        "description": "دجاج مشوي مع تتبيلة خاصة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 350,
+          "protein": "42g",
+          "carbs": "8g",
+          "fat": "16g"
+        },
+        "price": 45.00
+      },
+      {
+        "id": 2,
+        "name": "كفتة مشوية",
+        "description": "لحم بقري مفروم مع بهارات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 420,
+          "protein": "38g",
+          "carbs": "12g",
+          "fat": "24g"
+        },
+        "price": 50.00
+      },
+      {
+        "id": 3,
+        "name": "لحم مشوي",
+        "description": "قطع لحم مشوي مع خضار",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 480,
+          "protein": "45g",
+          "carbs": "15g",
+          "fat": "28g"
+        },
+        "price": 65.00
+      },
+      {
+        "id": 4,
+        "name": "سمك مشوي",
+        "description": "سمك ناجل مشوي مع ليمون",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 320,
+          "protein": "35g",
+          "carbs": "5g",
+          "fat": "18g"
+        },
+        "price": 75.00
+      },
+      {
+        "id": 5,
+        "name": "كباب حلة",
+        "description": "لحم مشوي مع صلصة الطماطم",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 380,
+          "protein": "40g",
+          "carbs": "10g",
+          "fat": "22g"
+        },
+        "price": 55.00
+      },
+      {
+        "id": 6,
+        "name": "شيش كباب",
+        "description": "قطع لحم مع الفلفل والبصل",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 410,
+          "protein": "43g",
+          "carbs": "12g",
+          "fat": "25g"
+        },
+        "price": 60.00
+      },
+      {
+        "id": 7,
+        "name": "دجاج مشوي كامل",
+        "description": "دجاج كامل مشوي مع أرز",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 620,
+          "protein": "55g",
+          "carbs": "65g",
+          "fat": "22g"
+        },
+        "price": 85.00
+      },
+      {
+        "id": 8,
+        "name": "مشكل مشويات",
+        "description": "تشكيلة متنوعة من المشويات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 780,
+          "protein": "68g",
+          "carbs": "40g",
+          "fat": "45g"
+        },
+        "price": 120.00
+      },
+      {
+        "id": 9,
+        "name": "كبدة مشوية",
+        "description": "كبدة غنم مشوية مع بهارات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 290,
+          "protein": "36g",
+          "carbs": "6g",
+          "fat": "14g"
+        },
+        "price": 40.00
+      },
+      {
+        "id": 10,
+        "name": "ستيك ريب آي",
+        "description": "ستيك لحم مشوي مميز",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 520,
+          "protein": "48g",
+          "carbs": "10g",
+          "fat": "35g"
+        },
+        "price": 95.00
+      }
+    ]
+  },
+  {
+    "id": "desserts",
+    "name": "الحلويات",
+    "items": [
+      {
+        "id": 11,
+        "name": "كنافة نابلسية",
+        "description": "كنافة بالقشطة والمكسرات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 480,
+          "protein": "8g",
+          "carbs": "65g",
+          "fat": "22g"
+        },
+        "price": 35.00
+      },
+      {
+        "id": 12,
+        "name": "بقلاوة",
+        "description": "بقلاوة بالفستق الحلبي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 420,
+          "protein": "6g",
+          "carbs": "58g",
+          "fat": "20g"
+        },
+        "price": 30.00
+      },
+      {
+        "id": 13,
+        "name": "أم علي",
+        "description": "خبز مع كريمة ومكسرات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 380,
+          "protein": "7g",
+          "carbs": "52g",
+          "fat": "18g"
+        },
+        "price": 25.00
+      },
+      {
+        "id": 14,
+        "name": "كيكة الشوكولاتة",
+        "description": "كيكة شوكولاتة غنية",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 450,
+          "protein": "5g",
+          "carbs": "60g",
+          "fat": "25g"
+        },
+        "price": 28.00
+      },
+      {
+        "id": 15,
+        "name": "تشيز كيك",
+        "description": "تشيز كيك بالتوت الطازج",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 410,
+          "protein": "8g",
+          "carbs": "45g",
+          "fat": "24g"
+        },
+        "price": 32.00
+      },
+      {
+        "id": 16,
+        "name": "مهلبيّة",
+        "description": "مهلبيّة بالفستق الحلبي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 320,
+          "protein": "6g",
+          "carbs": "40g",
+          "fat": "16g"
+        },
+        "price": 20.00
+      },
+      {
+        "id": 17,
+        "name": "قطايف",
+        "description": "قطايف بالقشطة والمكسرات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 370,
+          "protein": "7g",
+          "carbs": "48g",
+          "fat": "19g"
+        },
+        "price": 38.00
+      },
+      {
+        "id": 18,
+        "name": "آيس كريم",
+        "description": "آيس كريم بثلاث نكهات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 280,
+          "protein": "4g",
+          "carbs": "35g",
+          "fat": "14g"
+        },
+        "price": 22.00
+      },
+      {
+        "id": 19,
+        "name": "لقيمات",
+        "description": "لقيمات بالعسل والمكسرات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 310,
+          "protein": "5g",
+          "carbs": "42g",
+          "fat": "15g"
+        },
+        "price": 18.00
+      },
+      {
+        "id": 20,
+        "name": "فطيرة التفاح",
+        "description": "فطيرة التفاح بالقرفة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 340,
+          "protein": "4g",
+          "carbs": "55g",
+          "fat": "14g"
+        },
+        "price": 26.00
+      }
+    ]
+  },
+  {
+    "id": "macarons",
+    "name": "المكرونات",
+    "items": [
+      {
+        "id": 21,
+        "name": "مكرونات شوكولاتة",
+        "description": "مكرونات بحشوة الشوكولاتة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 120,
+          "protein": "2g",
+          "carbs": "18g",
+          "fat": "5g"
+        },
+        "price": 15.00
+      },
+      {
+        "id": 22,
+        "name": "مكرونات فراولة",
+        "description": "مكرونات بحشوة الفراولة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 110,
+          "protein": "2g",
+          "carbs": "17g",
+          "fat": "4g"
+        },
+        "price": 15.00
+      },
+      {
+        "id": 23,
+        "name": "مكرونات فانيليا",
+        "description": "مكرونات بحشوة الفانيليا",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 115,
+          "protein": "2g",
+          "carbs": "18g",
+          "fat": "4g"
+        },
+        "price": 15.00
+      },
+      {
+        "id": 24,
+        "name": "مكرونات ليمون",
+        "description": "مكرونات بحشوة الليمون",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 105,
+          "protein": "2g",
+          "carbs": "16g",
+          "fat": "4g"
+        },
+        "price": 15.00
+      },
+      {
+        "id": 25,
+        "name": "مكرونات كراميل",
+        "description": "مكرونات بحشوة الكراميل",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 130,
+          "protein": "2g",
+          "carbs": "20g",
+          "fat": "5g"
+        },
+        "price": 17.00
+      },
+      {
+        "id": 26,
+        "name": "مكرونات قهوة",
+        "description": "مكرونات بحشوة القهوة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 125,
+          "protein": "2g",
+          "carbs": "19g",
+          "fat": "5g"
+        },
+        "price": 17.00
+      },
+      {
+        "id": 27,
+        "name": "مكرونات ورد",
+        "description": "مكرونات بنكهة ماء الورد",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 118,
+          "protein": "2g",
+          "carbs": "18g",
+          "fat": "4g"
+        },
+        "price": 16.00
+      },
+      {
+        "id": 28,
+        "name": "مكرونات لوز",
+        "description": "مكرونات بنكهة اللوز",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 128,
+          "protein": "3g",
+          "carbs": "18g",
+          "fat": "5g"
+        },
+        "price": 16.00
+      },
+      {
+        "id": 29,
+        "name": "مكرونات توت",
+        "description": "مكرونات بحشوة التوت",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 112,
+          "protein": "2g",
+          "carbs": "17g",
+          "fat": "4g"
+        },
+        "price": 18.00
+      },
+      {
+        "id": 30,
+        "name": "مكرونات فستق",
+        "description": "مكرونات بحشوة الفستق",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 135,
+          "protein": "3g",
+          "carbs": "19g",
+          "fat": "6g"
+        },
+        "price": 18.00
+      }
+    ]
+  },
+  {
+    "id": "drinks",
+    "name": "المشروبات",
+    "items": [
+      {
+        "id": 31,
+        "name": "عصير برتقال",
+        "description": "عصير برتقال طازج",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 110,
+          "protein": "2g",
+          "carbs": "25g",
+          "fat": "0g"
+        },
+        "price": 12.00
+      },
+      {
+        "id": 32,
+        "name": "عصير ليمون",
+        "description": "ليموناضة منعشة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 90,
+          "protein": "1g",
+          "carbs": "22g",
+          "fat": "0g"
+        },
+        "price": 10.00
+      },
+      {
+        "id": 33,
+        "name": "عصير فراولة",
+        "description": "عصير فراولة طازج",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 120,
+          "protein": "1g",
+          "carbs": "28g",
+          "fat": "0g"
+        },
+        "price": 14.00
+      },
+      {
+        "id": 34,
+        "name": "عصير مانجو",
+        "description": "عصير مانجو طازج",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 130,
+          "protein": "1g",
+          "carbs": "31g",
+          "fat": "0g"
+        },
+        "price": 15.00
+      },
+      {
+        "id": 35,
+        "name": "مشروب الطاقة",
+        "description": "مشروب طاقة منعش",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 95,
+          "protein": "0g",
+          "carbs": "24g",
+          "fat": "0g"
+        },
+        "price": 10.00
+      },
+      {
+        "id": 36,
+        "name": "قهوة عربية",
+        "description": "قهوة عربية أصيلة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 5,
+          "protein": "0g",
+          "carbs": "1g",
+          "fat": "0g"
+        },
+        "price": 8.00
+      },
+      {
+        "id": 37,
+        "name": "شاي بالنعناع",
+        "description": "شاي أخضر بالنعناع",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 2,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "0g"
+        },
+        "price": 8.00
+      },
+      {
+        "id": 38,
+        "name": "كابتشينو",
+        "description": "كابتشينو إيطالي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 120,
+          "protein": "6g",
+          "carbs": "10g",
+          "fat": "6g"
+        },
+        "price": 12.00
+      },
+      {
+        "id": 39,
+        "name": "ميلك شيك",
+        "description": "ميلك شيك بالشوكولاتة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 320,
+          "protein": "8g",
+          "carbs": "45g",
+          "fat": "12g"
+        },
+        "price": 16.00
+      },
+      {
+        "id": 40,
+        "name": "مياه معدنية",
+        "description": "مياه معدنية باردة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 0,
+          "protein": "0g",
+          "carbs": "0g",
+          "fat": "0g"
+        },
+        "price": 5.00
+      }
+    ]
+  },
+  {
+    "id": "seafood",
+    "name": "الأسماك",
+    "items": [
+      {
+        "id": 41,
+        "name": "سمك ناجل مشوي",
+        "description": "سمك ناجل طازج مشوي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 280,
+          "protein": "32g",
+          "carbs": "0g",
+          "fat": "15g"
+        },
+        "price": 85.00
+      },
+      {
+        "id": 42,
+        "name": "جمبري مشوي",
+        "description": "جمبري طازج مشوي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 190,
+          "protein": "24g",
+          "carbs": "1g",
+          "fat": "10g"
+        },
+        "price": 90.00
+      },
+      {
+        "id": 43,
+        "name": "سمك فيليه مقلي",
+        "description": "فيليه سمك مقلي مقرمش",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 310,
+          "protein": "28g",
+          "carbs": "12g",
+          "fat": "18g"
+        },
+        "price": 75.00
+      },
+      {
+        "id": 44,
+        "name": "كلماري مشوي",
+        "description": "كلماري طازج مشوي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 180,
+          "protein": "22g",
+          "carbs": "8g",
+          "fat": "7g"
+        },
+        "price": 80.00
+      },
+      {
+        "id": 45,
+        "name": "سلمون مشوي",
+        "description": "سلمون طازج مشوي",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 350,
+          "protein": "34g",
+          "carbs": "0g",
+          "fat": "22g"
+        },
+        "price": 95.00
+      },
+      {
+        "id": 46,
+        "name": "مشكل بحري",
+        "description": "تشكيلة متنوعة من المأكولات البحرية",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 480,
+          "protein": "45g",
+          "carbs": "15g",
+          "fat": "28g"
+        },
+        "price": 130.00
+      },
+      {
+        "id": 47,
+        "name": "سمك سنجاري",
+        "description": "سمك سنجاري بالطريقة المصرية",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 320,
+          "protein": "30g",
+          "carbs": "10g",
+          "fat": "18g"
+        },
+        "price": 80.00
+      },
+      {
+        "id": 48,
+        "name": "محار مشوي",
+        "description": "محار طازج مشوي بالزبدة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 210,
+          "protein": "26g",
+          "carbs": "5g",
+          "fat": "10g"
+        },
+        "price": 110.00
+      },
+      {
+        "id": 49,
+        "name": "سمك قاروص",
+        "description": "سمك قاروص مشوي بالليمون",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 240,
+          "protein": "28g",
+          "carbs": "0g",
+          "fat": "14g"
+        },
+        "price": 90.00
+      },
+      {
+        "id": 50,
+        "name": "كباب سمك",
+        "description": "كباب من السمك الطازج",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 290,
+          "protein": "32g",
+          "carbs": "8g",
+          "fat": "15g"
+        },
+        "price": 70.00
+      }
+    ]
+  },
+  {
+    "id": "vegetarian",
+    "name": "نباتي",
+    "items": [
+      {
+        "id": 51,
+        "name": "سلطة يونانية",
+        "description": "خضروات طازجة مع جبنة فيتا",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 220,
+          "protein": "8g",
+          "carbs": "15g",
+          "fat": "16g"
+        },
+        "price": 28.00
+      },
+      {
+        "id": 52,
+        "name": "برجر نباتي",
+        "description": "برجر مصنوع من الخضروات والبقول",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 320,
+          "protein": "18g",
+          "carbs": "35g",
+          "fat": "14g"
+        },
+        "price": 35.00
+      },
+      {
+        "id": 53,
+        "name": "معكرونة بالخضار",
+        "description": "معكرونة مع صلصة الخضار المشكلة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 380,
+          "protein": "12g",
+          "carbs": "65g",
+          "fat": "10g"
+        },
+        "price": 42.00
+      },
+      {
+        "id": 54,
+        "name": "فطيرة سبانخ",
+        "description": "فطيرة بالسبانخ والجبن",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 310,
+          "protein": "14g",
+          "carbs": "32g",
+          "fat": "16g"
+        },
+        "price": 38.00
+      },
+      {
+        "id": 55,
+        "name": "شوربة عدس",
+        "description": "شوربة عدس بالخضروات",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 250,
+          "protein": "15g",
+          "carbs": "40g",
+          "fat": "5g"
+        },
+        "price": 25.00
+      },
+      {
+        "id": 56,
+        "name": "ساندويتش فلافل",
+        "description": "فلافل مع الطحينة والخضار",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 350,
+          "protein": "12g",
+          "carbs": "45g",
+          "fat": "14g"
+        },
+        "price": 22.00
+      },
+      {
+        "id": 57,
+        "name": "كوسة محشية",
+        "description": "كوسة محشية بالأرز والخضار",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 280,
+          "protein": "8g",
+          "carbs": "42g",
+          "fat": "10g"
+        },
+        "price": 40.00
+      },
+      {
+        "id": 58,
+        "name": "مسقعة",
+        "description": "باذنجان مع البطاطس والطماطم",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 320,
+          "protein": "6g",
+          "carbs": "35g",
+          "fat": "18g"
+        },
+        "price": 45.00
+      },
+      {
+        "id": 59,
+        "name": "تبولة",
+        "description": "سلطة تبولة لبنانية",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 180,
+          "protein": "5g",
+          "carbs": "25g",
+          "fat": "8g"
+        },
+        "price": 30.00
+      },
+      {
+        "id": 60,
+        "name": "بيتزا نباتية",
+        "description": "بيتزا بالخضروات المشكلة",
+        "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80",
+        "nutrition": {
+          "calories": 420,
+          "protein": "15g",
+          "carbs": "60g",
+          "fat": "16g"
+        },
+        "price": 55.00
+      }
+    ]
+  }
+]

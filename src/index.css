@@ -1,0 +1,61 @@
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #f8f7f3;
+}
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+}
+.category-title {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.category-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #c69c6d;
+}
+.food-card {
+  transition: transform 0.3s ease;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.food-card:hover {
+  transform: translateY(-5px);
+}
+.food-img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+}
+.scroll-container {
+  scroll-behavior: smooth;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.nav-btn {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.nav-btn:hover {
+  background-color: #c69c6d;
+  color: white;
+}
+.footer {
+  background-color: #1a1a1a;
+  color: #f1f1f1;
+}
+nav a {
+  margin-left: 32px;
+}

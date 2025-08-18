@@ -1,0 +1,467 @@
+[
+  {
+    "contact": {
+      "watsapp": "https://wa.me/20123456789"
+    },
+    "id": "grill-section",
+    "title": "المشويات",
+    "items": [
+      {
+        "name": "شيش طاووق",
+        "description": "دجاج مشوي مع تتبيلة خاصة",
+        "price": "45 ج.م",
+        "img": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كفتة مشوية",
+        "description": "لحم بقري مفروم مع بهارات",
+        "price": "50 ج.م",
+        "img": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "لحم مشوي",
+        "description": "قطع لحم مشوي مع خضار",
+        "price": "65 ج.م",
+        "img": "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سمك مشوي",
+        "description": "سمك ناجل مشوي مع ليمون",
+        "price": "75 ج.م",
+        "img": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كباب حلة",
+        "description": "لحم مشوي مع صلصة الطماطم",
+        "price": "55 ج.م",
+        "img": "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "شيش كباب",
+        "description": "قطع لحم مع الفلفل والبصل",
+        "price": "60 ج.م",
+        "img": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "دجاج مشوي كامل",
+        "description": "دجاج كامل مشوي مع أرز",
+        "price": "85 ج.م",
+        "img": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مشكل مشويات",
+        "description": "تشكيلة متنوعة من المشويات",
+        "price": "120 ج.م",
+        "img": "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كبدة مشوية",
+        "description": "كبدة غنم مشوية مع بهارات",
+        "price": "40 ج.م",
+        "img": "https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "ستيك ريب آي",
+        "description": "ستيك لحم مشوي مميز",
+        "price": "95 ج.م",
+        "img": "https://images.unsplash.com/photo-1607116667981-ffbcba095a4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  },
+  {
+    "id": "dessert-section",
+    "title": "الحلويات",
+    "items": [
+      {
+        "name": "كنافة نابلسية",
+        "description": "كنافة بالقشطة والمكسرات",
+        "price": "35 ج.م",
+        "img": "https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "بقلاوة",
+        "description": "بقلاوة بالفستق الحلبي",
+        "price": "30 ج.م",
+        "img": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "أم علي",
+        "description": "خبز مع كريمة ومكسرات",
+        "price": "25 ج.م",
+        "img": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كيكة الشوكولاتة",
+        "description": "كيكة شوكولاتة غنية",
+        "price": "28 ج.م",
+        "img": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "تشيز كيك",
+        "description": "تشيز كيك بالتوت الطازج",
+        "price": "32 ج.م",
+        "img": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مهلبيّة",
+        "description": "مهلبيّة بالفستق الحلبي",
+        "price": "20 ج.م",
+        "img": "https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "قطايف",
+        "description": "قطايف بالقشطة والمكسرات",
+        "price": "38 ج.م",
+        "img": "https://images.unsplash.com/photo-1650975109947-4d7f5c9d0d7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "آيس كريم",
+        "description": "آيس كريم بثلاث نكهات",
+        "price": "22 ج.م",
+        "img": "https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "لقيمات",
+        "description": "لقيمات بالعسل والمكسرات",
+        "price": "18 ج.م",
+        "img": "https://images.unsplash.com/photo-1631146987649-9bcee4f1d5a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "فطيرة التفاح",
+        "description": "فطيرة التفاح بالقرفة",
+        "price": "26 ج.م",
+        "img": "https://images.unsplash.com/photo-1562007908-859b4ba9a1a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  },
+  {
+    "id": "macaron-section",
+    "title": "المكرونات",
+    "items": [
+      {
+        "name": "مكرونات شوكولاتة",
+        "description": "مكرونات بحشوة الشوكولاتة",
+        "price": "15 ج.م",
+        "img": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات فراولة",
+        "description": "مكرونات بحشوة الفراولة",
+        "price": "15 ج.م",
+        "img": "https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات فانيليا",
+        "description": "مكرونات بحشوة الفانيليا",
+        "price": "15 ج.م",
+        "img": "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات ليمون",
+        "description": "مكرونات بحشوة الليمون",
+        "price": "15 ج.م",
+        "img": "https://images.unsplash.com/photo-1562007908-859b4ba9a1a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات كراميل",
+        "description": "مكرونات بحشوة الكراميل",
+        "price": "17 ج.م",
+        "img": "https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات قهوة",
+        "description": "مكرونات بحشوة القهوة",
+        "price": "17 ج.م",
+        "img": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات ورد",
+        "description": "مكرونات بنكهة ماء الورد",
+        "price": "16 ج.م",
+        "img": "https://images.unsplash.com/photo-1631146987649-9bcee4f1d5a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات لوز",
+        "description": "مكرونات بنكهة اللوز",
+        "price": "16 ج.م",
+        "img": "https://images.unsplash.com/photo-1562007908-859b4ba9a1a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات توت",
+        "description": "مكرونات بحشوة التوت",
+        "price": "18 ج.م",
+        "img": "https://images.unsplash.com/photo-1631146987649-9bcee4f1d5a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مكرونات فستق",
+        "description": "مكرونات بحشوة الفستق",
+        "price": "18 ج.م",
+        "img": "https://images.unsplash.com/photo-1560008581-09826d1de69e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  },
+  {
+    "id": "seafood-section",
+    "title": "الأسماك",
+    "items": [
+      {
+        "name": "سمك ناجل مشوي",
+        "description": "سمك ناجل طازج مشوي",
+        "price": "85 ج.م",
+        "img": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "جمبري مشوي",
+        "description": "جمبري طازج مشوي",
+        "price": "90 ج.م",
+        "img": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سمك فيليه مقلي",
+        "description": "فيليه سمك مقلي مقرمش",
+        "price": "75 ج.م",
+        "img": "https://images.unsplash.com/photo-1555126634-323283e090fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كلماري مشوي",
+        "description": "كلماري طازج مشوي",
+        "price": "80 ج.م",
+        "img": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سلمون مشوي",
+        "description": "سلمون طازج مشوي",
+        "price": "95 ج.م",
+        "img": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مشكل بحري",
+        "description": "تشكيلة متنوعة من المأكولات البحرية",
+        "price": "130 ج.م",
+        "img": "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سمك سنجاري",
+        "description": "سمك سنجاري بالطريقة المصرية",
+        "price": "80 ج.م",
+        "img": "https://images.unsplash.com/photo-1607116667981-ffbcba095a4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "محار مشوي",
+        "description": "محار طازج مشوي بالزبدة",
+        "price": "110 ج.م",
+        "img": "https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سمك قاروص",
+        "description": "سمك قاروص مشوي بالليمون",
+        "price": "90 ج.م",
+        "img": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كباب سمك",
+        "description": "كباب من السمك الطازج",
+        "price": "70 ج.م",
+        "img": "https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  },
+  {
+    "id": "sandwich-section",
+    "title": "السندوتشات",
+    "items": [
+      {
+        "name": "سندوتش برجر",
+        "description": "برجر لحم مع الخضار",
+        "price": "25 ج.م",
+        "img": "https://images.unsplash.com/photo-1553979459-d2229ba7433b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش شاورما دجاج",
+        "description": "شاورما دجاج مع الثومية",
+        "price": "20 ج.م",
+        "img": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش كباب",
+        "description": "كباب لحم مع الخضار",
+        "price": "22 ج.م",
+        "img": "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش فيليه دجاج",
+        "description": "فيليه دجاج مقلي",
+        "price": "18 ج.م",
+        "img": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش فلافل",
+        "description": "فلافل مع الطحينة",
+        "price": "15 ج.م",
+        "img": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش شاورما لحم",
+        "description": "شاورما لحم مع الثومية",
+        "price": "23 ج.م",
+        "img": "https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش فيليه سمك",
+        "description": "فيليه سمك مقلي",
+        "price": "28 ج.م",
+        "img": "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش جبنة مشوية",
+        "description": "جبنة موزاريلا مشوية",
+        "price": "16 ج.م",
+        "img": "https://images.unsplash.com/photo-1603532648955-a039a9a56b76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش هوت دوج",
+        "description": "هوت دوج مع الصلصة",
+        "price": "17 ج.م",
+        "img": "https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سندوتش زنجر",
+        "description": "زنجر دجاج مقرمش",
+        "price": "21 ج.م",
+        "img": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  },
+  {
+    "id": "drinks-section",
+    "title": "المشروبات",
+    "items": [
+      {
+        "name": "عصير برتقال",
+        "description": "عصير برتقال طازج",
+        "price": "12 ج.م",
+        "img": "https://images.unsplash.com/photo-1613478223719-2ab802602423?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "عصير ليمون",
+        "description": "ليموناضة منعشة",
+        "price": "10 ج.م",
+        "img": "https://images.unsplash.com/photo-1603569283847-aa295f0d016a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "عصير فراولة",
+        "description": "عصير فراولة طازج",
+        "price": "14 ج.م",
+        "img": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "عصير مانجو",
+        "description": "عصير مانجو طازج",
+        "price": "15 ج.م",
+        "img": "https://images.unsplash.com/photo-1558326567-98ae2405596b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مشروب الطاقة",
+        "description": "مشروب طاقة منعش",
+        "price": "10 ج.م",
+        "img": "https://images.unsplash.com/photo-1612203985729-70726954388c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "قهوة عربية",
+        "description": "قهوة عربية أصيلة",
+        "price": "8 ج.م",
+        "img": "https://images.unsplash.com/photo-1612892483236-52d32a0e0ac1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "شاي بالنعناع",
+        "description": "شاي أخضر بالنعناع",
+        "price": "8 ج.م",
+        "img": "https://images.unsplash.com/photo-1603532648955-a039a9a56b76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "كابتشينو",
+        "description": "كابتشينو إيطالي",
+        "price": "12 ج.م",
+        "img": "https://images.unsplash.com/photo-1627834377411-8da5f4f09de8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "ميلك شيك",
+        "description": "ميلك شيك بالشوكولاتة",
+        "price": "16 ج.م",
+        "img": "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مياه معدنية",
+        "description": "مياه معدنية باردة",
+        "price": "5 ج.م",
+        "img": "https://images.unsplash.com/photo-1631146987649-9bcee4f1d5a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  },
+  {
+    "id": "extras-section",
+    "title": "الإضافات",
+    "items": [
+      {
+        "name": "بطاطس مقلية",
+        "description": "بطاطس مقلية مقرمشة",
+        "price": "10 ج.م",
+        "img": "https://images.unsplash.com/photo-1585109649139-366815a0d713?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "سلطة خضراء",
+        "description": "سلطة خضراء طازجة",
+        "price": "12 ج.م",
+        "img": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "أرز بسمتي",
+        "description": "أرز بسمتي أبيض",
+        "price": "8 ج.م",
+        "img": "https://images.unsplash.com/photo-1603133872878-684f208fb84b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "خضار سوتيه",
+        "description": "خضار سوتيه بالزيت",
+        "price": "10 ج.م",
+        "img": "https://images.unsplash.com/photo-1563245372-f21724e3856d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "صوص ثوم",
+        "description": "صوص ثوم كريمي",
+        "price": "5 ج.م",
+        "img": "https://images.unsplash.com/photo-1617196034796-73dfa7b1fd56?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "صوص باربكيو",
+        "description": "صوص باربكيو لذيذ",
+        "price": "5 ج.م",
+        "img": "https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "خبز توست",
+        "description": "خبز توست طازج",
+        "price": "6 ج.م",
+        "img": "https://images.unsplash.com/photo-1608190003443-86ab6a3d1d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "مخللات",
+        "description": "طبق مخللات متنوع",
+        "price": "5 ج.م",
+        "img": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "صوص حار",
+        "description": "صوص حار بالشطة",
+        "price": "4 ج.م",
+        "img": "https://images.unsplash.com/photo-1615873968403-89e068629265?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      },
+      {
+        "name": "صوص جبن",
+        "description": "صوص جبن كريمي",
+        "price": "6 ج.م",
+        "img": "https://images.unsplash.com/photo-1626082927389-6cd097cee6a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80"
+      }
+    ]
+  }
+]

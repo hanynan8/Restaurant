@@ -1,0 +1,78 @@
+{
+  "hero": {
+    "title": "فروعنا",
+    "subtitle": "زوروا أحد فروعنا القريبة منكم واستمتعوا بتجربة فريدة",
+    "backgroundImage": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
+  },
+  "mainLocation": {
+    "title": "الفرع الرئيسي",
+    "address": "شارع الملك فهد، الرياض، المملكة العربية السعودية",
+    "phone": "+966 11 123 4567",
+    "email": "main@restaurant.com",
+    "hours": [
+      {
+        "day": "الأحد - الخميس",
+        "time": "10:00 صباحًا - 12:00 منتصف الليل"
+      },
+      {
+        "day": "الجمعة",
+        "time": "1:00 ظهرًا - 1:00 صباحًا"
+      },
+      {
+        "day": "السبت",
+        "time": "10:00 صباحًا - 1:00 صباحًا"
+      }
+    ],
+    "features": [
+      "مواقف مجانية",
+      "خدمة التوصيل",
+      "مكان مخصص للعائلات",
+      "شاشات عرض المباريات",
+      "إنترنت مجاني سريع",
+      "منطقة ألعاب للأطفال"
+    ],
+    "mapEmbedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.735586178372!2d46.637097!3d24.813545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQ4JzQ4LjgiTiA0NsKwMzgnMTMuNSJF!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa",
+    "mapLink": "https://maps.app.goo.gl/R9xs8aaStRxZfHFU8"
+  },
+  "branches": [
+    {
+      "city": "جدة",
+      "address": "حي الحمراء، شارع الأمير سلطان",
+      "phone": "+966 12 345 6789",
+      "hours": "يوميًا من 11 صباحًا حتى 1 صباحًا",
+      "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "mapEmbedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.9876543210987!2d39.123456!3d21.543210!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEyJzQ1LjQiTiAzOcKwMDcnMTIuMCJF!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa",
+      "mapLink": "https://maps.app.goo.gl/example1"
+    },
+    {
+      "city": "الدمام",
+      "address": "حي الشاطئ، شارع الملك عبدالله",
+      "phone": "+966 13 987 6543",
+      "hours": "يوميًا من 10 صباحًا حتى 12 منتصف الليل",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "mapEmbedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.7654321098765!2d50.123456!3d26.456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzQ1LjQiTiA1MMKwMDcnMTIuMCJF!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa",
+      "mapLink": "https://maps.app.goo.gl/example2"
+    },
+    {
+      "city": "مكة المكرمة",
+      "address": "حي العزيزية، شارع الستين",
+      "phone": "+966 14 456 1234",
+      "hours": "يوميًا من 12 ظهرًا حتى 12 منتصف الليل",
+      "image": "https://images.unsplash.com/photo-1554679665-f5537f187268?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "mapEmbedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3710.1234567890123!2d39.789012!3d21.456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDEyJzQ1LjQiTiAzOcKwMDcnMTIuMCJF!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa",
+      "mapLink": "https://maps.app.goo.gl/example3"
+    },
+    {
+      "city": "الخبر",
+      "address": "حي الراكة، شارع الأمير نايف",
+      "phone": "+966 15 789 0123",
+      "hours": "يوميًا من 10 صباحًا حتى 12 منتصف الليل",
+      "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "mapEmbedSrc": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3578.123456789012!2d50.123456!3d26.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDEyJzQ1LjQiTiA1MMKwMDcnMTIuMCJF!5e0!3m2!1sen!2ssa!4v1620000000000!5m2!1sen!2ssa",
+      "mapLink": "https://maps.app.goo.gl/example4"
+    }
+  ],
+  "contact": {
+    "watsapp": "https://wa.me/20123456789"
+  }
+}
