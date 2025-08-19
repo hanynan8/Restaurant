@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaCalendar, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
-import foodData from '../data/homeData.json'; // استيراد البيانات
 import { Link } from 'react-router-dom';
+import RestaurantLoading from '../components/loading.js'
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // Function to scroll sections horizontally
   const scrollSection = (sectionId, scrollAmount) => {
@@ -18,17 +20,53 @@ const Home = () => {
   };
 
   function goToWatsapp() {
-    // الرابط الذي يؤدي إلى محادثة واتساب مع الرقم المحدد
-    const watsappLink = foodData[0].contact.watsapp;
-    
-    // توجيه المستخدم إلى الرابط
-    window.location.href = watsappLink;
+    // سنحتاج إلى تعديل هذا الجزء بعد جلب البيانات
+    if (categories.length > 0 && categories[0].contact) {
+      const watsappLink = categories[0].contact.watsapp;
+      window.location.href = watsappLink;
+    }
   }
 
-  // تحميل البيانات عند بدء التشغيل
+  // جلب البيانات من API عند بدء التشغيل
   useEffect(() => {
-    setCategories(foodData);
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('https://restaurant-back-end-ehus.vercel.app/api/data');
+        
+        if (!response.ok) {
+          throw new Error('فشل في جلب البيانات');
+        }
+        
+        const data = await response.json();
+        
+        // افتراض أن API يعيد بيانات Home في خاصية معينة
+        // إذا كانت البيانات تحتوي على هيكل مختلف، يجب تعديل هذا الجزء
+        setCategories(data.home || data); // حسب هيكل البيانات الفعلي
+      } catch (err) {
+        setError(err.message);
+        console.error('Error fetching data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
+
+  if (loading) {
+    return (
+      <RestaurantLoading />
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="home flex justify-center items-center h-screen">
+        <div className="text-red-500 text-xl">حدث خطأ: {error}</div>
+      </div>
+    );
+  }
 
   return (
     <div className="home">
@@ -54,7 +92,7 @@ const Home = () => {
                 تصفح القائمة <FaArrowLeft className="ml-2" />
               </button>
             </Link>
-            <button onClick={ () => { goToWatsapp()} } className="bg-white hover:bg-gray-100 text-amber-700 px-8 py-3 text-lg rounded-lg transition font-bold flex items-center">
+            <button onClick={goToWatsapp} className="bg-white hover:bg-gray-100 text-amber-700 px-8 py-3 text-lg rounded-lg transition font-bold flex items-center">
               طلب اونلاين <FaCalendar className="ml-2" />
             </button>
           </div>
@@ -88,7 +126,7 @@ const Home = () => {
                           <span className="text-amber-700 font-bold">{item.price}</span>
                         </div>
                         <p className="text-gray-600 text-sm mb-3">{item.description}</p>
-                        <button onClick={ () => { goToWatsapp() }} className="w-full bg-amber-700 hover:bg-amber-800 text-white py-2 rounded-lg transition">
+                        <button onClick={goToWatsapp} className="w-full bg-amber-700 hover:bg-amber-800 text-white py-2 rounded-lg transition">
                           <i className="fas fa-plus mr-2"></i> اطلب الآن
                         </button>
                       </div>

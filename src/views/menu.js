@@ -1,43 +1,97 @@
 import React, { useState, useEffect } from 'react';
-import menuData from '../data/menuData.json';
+import RestaurantLoading from '../components/loading.js'
 
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   const [filteredItems, setFilteredItems] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [menuData, setMenuData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [watsappLink, setWatsappLink] = useState('');
 
   function goToWatsapp() {
-    // الرابط الذي يؤدي إلى محادثة واتساب مع الرقم المحدد 
-    const watsappLink = menuData[0].contact.watsapp;
-    // توجيه المستخدم إلى الرابط
-    window.location.href = watsappLink;
+    if (watsappLink) {
+      window.location.href = watsappLink;
+    }
   }
 
   useEffect(() => {
-    // استخراج جميع الفئات
-    const allCategories = menuData.map(cat => ({
-      id: cat.id,
-      name: cat.name
-    }));
-    setCategories([{ id: 'all', name: 'الكل' }, ...allCategories]);
+    // جلب البيانات من API
+    const fetchData = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch('https://restaurant-back-end-ehus.vercel.app/api/data');
+        
+        if (!response.ok) {
+          throw new Error('فشل في جلب البيانات');
+        }
+        
+        const data = await response.json();
+        
+        // افتراض أن البيانات تحتوي على معلومات الاتصال والمنتجات
+        // قد تحتاج إلى تعديل هذا الجزء حسب هيكل البيانات الفعلي
+        setMenuData(data.menu || data.products || data);
+        
+        // استخراج رابط واتساب من البيانات
+        if (data.contact && data.contact.watsapp) {
+          setWatsappLink(data.contact.watsapp);
+        }
+        
+        // استخراج جميع الفئات
+        const allCategories = Array.isArray(data.menu || data.products || data) 
+          ? (data.menu || data.products || data).map(cat => ({
+              id: cat.id || cat.categoryId,
+              name: cat.name || cat.categoryName
+            }))
+          : [];
+            
+        setCategories([{ id: 'all', name: 'الكل' }, ...allCategories]);
 
-    // تعيين العناصر الافتراضية
-    filterItems('all');
+        // تعيين العناصر الافتراضية
+        filterItems('all', data.menu || data.products || data);
+      } catch (err) {
+        setError(err.message);
+        console.error('Error fetching data:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
   }, []);
 
-  const filterItems = (categoryId) => {
+  const filterItems = (categoryId, data = menuData) => {
     setActiveCategory(categoryId);
     
     if (categoryId === 'all') {
       // عرض جميع العناصر من جميع الفئات
-      const allItems = menuData.flatMap(category => category.items);
+      const allItems = Array.isArray(data) 
+        ? data.flatMap(category => category.items || [])
+        : [];
       setFilteredItems(allItems);
     } else {
       // عرض العناصر الخاصة بالفئة المحددة
-      const category = menuData.find(cat => cat.id === categoryId);
-      setFilteredItems(category ? category.items : []);
+      const category = Array.isArray(data) 
+        ? data.find(cat => (cat.id || cat.categoryId) === categoryId)
+        : null;
+      setFilteredItems(category ? (category.items || []) : []);
     }
   };
+
+  if (loading) {
+    return (
+      <RestaurantLoading />
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-amber-100 py-8 px-4 sm:px-6 lg:px-8 flex justify-center items-center">
+        <div className="text-red-500 text-xl">حدث خطأ: {error}</div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-amber-100 py-8 px-4 sm:px-6 lg:px-8">
@@ -71,9 +125,9 @@ const MenuPage = () => {
 
         {/* عرض العناصر */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
+          {filteredItems.map((item, index) => (
             <div 
-              key={item.id}
+              key={item.id || index}
               className="bg-white rounded-2xl overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105"
             >
               <div className="relative">
@@ -98,30 +152,40 @@ const MenuPage = () => {
                 
                 <p className="text-gray-600 mb-4">{item.description}</p>
                 
-                {/* المعلومات الغذائية */}
-                <div className="bg-amber-50 rounded-xl p-4 mb-4">
-                  <h4 className="font-bold text-amber-800 mb-2">المكونات الغذائية</h4>
-                  <div className="grid grid-cols-2 gap-2 text-sm">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">السعرات</span>
-                      <span className="font-medium">{item.nutrition.calories}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">البروتين</span>
-                      <span className="font-medium">{item.nutrition.protein}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">الكربوهيدرات</span>
-                      <span className="font-medium">{item.nutrition.carbs}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">الدهون</span>
-                      <span className="font-medium">{item.nutrition.fat}</span>
+                {/* المعلومات الغذائية - عرضها فقط إذا كانت متوفرة */}
+                {item.nutrition && (
+                  <div className="bg-amber-50 rounded-xl p-4 mb-4">
+                    <h4 className="font-bold text-amber-800 mb-2">المكونات الغذائية</h4>
+                    <div className="grid grid-cols-2 gap-2 text-sm">
+                      {item.nutrition.calories && (
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">السعرات</span>
+                          <span className="font-medium">{item.nutrition.calories}</span>
+                        </div>
+                      )}
+                      {item.nutrition.protein && (
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">البروتين</span>
+                          <span className="font-medium">{item.nutrition.protein}</span>
+                        </div>
+                      )}
+                      {item.nutrition.carbs && (
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">الكربوهيدرات</span>
+                          <span className="font-medium">{item.nutrition.carbs}</span>
+                        </div>
+                      )}
+                      {item.nutrition.fat && (
+                        <div className="flex justify-between">
+                          <span className="text-gray-600">الدهون</span>
+                          <span className="font-medium">{item.nutrition.fat}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
-                </div>
+                )}
                 
-                <button onClick={ () => { goToWatsapp() }} className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-xl font-bold transition-colors duration-300 flex items-center justify-center">
+                <button onClick={goToWatsapp} className="w-full bg-amber-600 hover:bg-amber-700 text-white py-3 rounded-xl font-bold transition-colors duration-300 flex items-center justify-center">
                   <span>اطلب اونلاين</span>
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clipRule="evenodd" />
@@ -133,7 +197,7 @@ const MenuPage = () => {
         </div>
 
         {/* رسالة عندما لا يوجد عناصر */}
-        {filteredItems.length === 0 && (
+        {filteredItems.length === 0 && !loading && (
           <div className="text-center py-12">
             <h3 className="text-2xl font-bold text-amber-800">لا توجد عناصر في هذه الفئة</h3>
             <p className="text-amber-600 mt-2">الرجاء اختيار فئة أخرى</p>
