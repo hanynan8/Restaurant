@@ -1,16 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import '../index.css';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "../index.css";
+
+/**
+ * Nav component
+ * - يحسّن استدعاء البيانات للـ navbar
+ * - يضع زر "اطلب الآن" في القائمة المنسدلة على الموبايل
+ * - يحتفظ بالزر ظاهرًا على الديسكتوب
+ * - إغلاق الموبايل مِنو عند الضغط على أي رابط
+ * - تعامل مرن مع أشكال استجابة الـ API
+ */
+
+// ثابتات الـ API (لو عايز تغيرها)
+const API_URL = "https://restaurant-back-end-ehus.vercel.app/api/data?collection=navbar";
+const API_KEY = ""; // إن وُجد (مش آمن للـ client العام)
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-
-  // استخدم endpoint مخصص للـ navbar عشان يكون أخف
-  const API_URL = 'https://restaurant-back-end-ehus.vercel.app/api/data?collection=navbar';
-  const API_KEY = ''; // لو عندك مفتاح اكتبُه هنا (مش آمن للـ client العام)
 
   useEffect(() => {
     const controller = new AbortController();
@@ -21,19 +30,15 @@ function Nav() {
         setLoading(true);
         setError(null);
 
-        const headers = API_KEY ? { 'x-api-key': API_KEY } : {};
+        const headers = API_KEY ? { "x-api-key": API_KEY } : {};
         const response = await fetch(API_URL, { headers, signal });
 
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-
         const json = await response.json();
 
-        // مرونة في التعامل مع أشكال الاستجابة:
-        // 1) { navbar: { ... } }
-        // 2) directly an object for navbar
-        // 3) whole collections object { home:..., navbar: [...] }
+        // مرونة في التعامل مع أشكال الاستجابة
         let navbar = null;
 
         if (!json) {
@@ -43,23 +48,21 @@ function Nav() {
         } else if (json.data && json.data.navbar) {
           navbar = Array.isArray(json.data.navbar) ? json.data.navbar[0] || null : json.data.navbar;
         } else if (Array.isArray(json) && json.length > 0) {
-          // إذا رجع مصفوفة، خذ العنصر الأول أو ابحث عن navbar داخلها
-          const found = json.find(item => item && item.navbar);
+          const found = json.find((item) => item && item.navbar);
           if (found && found.navbar) navbar = Array.isArray(found.navbar) ? found.navbar[0] : found.navbar;
           else navbar = json[0];
-        } else if (typeof json === 'object') {
-          // لو رجع كائن كبير (كل الـ collections)
+        } else if (typeof json === "object") {
           if (json.navbar) navbar = Array.isArray(json.navbar) ? json.navbar[0] : json.navbar;
-          else navbar = json; // fallback: استخدم الكائن كما هو
+          else navbar = json;
         } else {
           navbar = null;
         }
 
         setData(navbar);
       } catch (err) {
-        if (err.name === 'AbortError') return;
-        console.error('Error fetching navbar:', err);
-        setError(err.message || 'Unknown error');
+        if (err.name === "AbortError") return;
+        console.error("Error fetching navbar:", err);
+        setError(err.message || "Unknown error");
       } finally {
         setLoading(false);
       }
@@ -67,117 +70,213 @@ function Nav() {
 
     fetchData();
     return () => controller.abort();
-  }, [API_URL, API_KEY]);
+  }, []); // لا تعتمد على متغيرات قابلة للتغيير هنا
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  // فتح رابط واتساب/رقم تِلفون بشكل مرن
+  function goToWhatsAppLink(raw) {
+    if (!raw) return;
+    let link = String(raw).trim();
 
-  function goToWatsapp() {
-    if (!data) return;
-    // محاولات متعددة لاستخراج رابط الواتساب بناءً على أشكال البيانات المختلفة
-    const candidates = [
-      data.watsappLink,
-      data.whatsapp,
-      data.contact?.watsapp,
-      data.contact?.whatsapp,
-      data.contact?.phone // كخيار بديل
-    ];
-    const link = candidates.find(Boolean);
-    if (link) window.location.href = link;
+    // لو الرقم فقط (أرقام فقط) نركّب رابط واتساب
+    const digitsOnly = link.replace(/[^\d+]/g, "");
+    if (!/^https?:\/\//i.test(link) && (digitsOnly.length >= 6 && digitsOnly.length <= 15)) {
+      // نستخدم رابط wa.me (أفضل للروابط القصيرة) أو api.whatsapp
+      link = `https://wa.me/${digitsOnly.replace(/^\+/, "")}`;
+    } else if (!/^https?:\/\//i.test(link)) {
+      // لو موجود مسار مثل wa.me/..
+      if (link.startsWith("wa.me") || link.startsWith("api.whatsapp.com")) {
+        link = `https://${link}`;
+      } else {
+        // كنهاية: أضف https://
+        link = `https://${link}`;
+      }
+    }
+
+    // افتح في تاب جديد
+    window.open(link, "_blank", "noopener,noreferrer");
   }
 
-  // fallbacks بسيطة عند العرض
-  const name = data?.restaurantName;
+  const toggleMenu = () => setIsMenuOpen((s) => !s);
+  const closeMenu = () => setIsMenuOpen(false);
+
+  // استخراج القيم مع fallbacks
+  const name = data?.restaurantName || data?.name;
   const txtHome = data?.home;
   const txtMenu = data?.menu;
   const txtAbout = data?.aboutUs || data?.about;
   const txtContact = data?.contactText || data?.contact;
   const txtLocation = data?.location;
-  const txtOrder = data?.orderOnline || data?.order;
+  const txtOrder = data?.orderOnline;
 
+  // مرشحات لرابط واتساب/الهاتف
+  const whatsappCandidates = [
+    data?.watsappLink,
+    data?.whatsapp,
+    data?.contact?.watsapp,
+    data?.contact?.whatsapp,
+    data?.contact?.phone,
+    data?.phone,
+  ];
+  const whatsappLink = whatsappCandidates.find(Boolean);
 
-
-  if (error) {
+  if (loading) {
     return (
-      <div className="nav">
-        <header className="sticky top-0 z-50 bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div className="flex items-center">
-              <h1 className="text-xl md:text-2xl font-bold text-amber-700">
-                <i className="fas fa-utensils mr-2"></i>خطأ في التحميل
-              </h1>
-            </div>
-          </div>
-        </header>
-      </div>
-    );
-  }
-
-  return (
-    <div className="nav">
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          {/* Logo */}
           <div className="flex items-center">
             <h1 className="text-xl md:text-2xl font-bold text-amber-700">
               <i className="fas fa-utensils mr-2"></i>{name}
             </h1>
           </div>
-
-          {/* Desktop Menu - Hidden on mobile */}
-          <nav className="hidden md:flex space-x-4 lg:space-x-8">
-            <NavLink to="/">{txtHome}</NavLink>
-            <NavLink to="/menu">{txtMenu}</NavLink>
-            <NavLink to="/aboutus">{txtAbout}</NavLink>
-            <NavLink to="/contact">{txtContact}</NavLink>
-            <NavLink to="/location">{txtLocation}</NavLink>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            <button onClick={goToWatsapp} className="bg-amber-700 hover:bg-amber-800 text-white px-3 py-1 md:px-4 md:py-2 rounded-lg transition text-sm md:text-base">
-              <i className="fas fa-shopping-cart mr-2"></i>{txtOrder}
-            </button>
-            <button 
-              className="md:hidden text-gray-700 text-xl focus:outline-none"
-              onClick={toggleMenu}
-            >
-              <i className={`fas ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
+          <div className="flex items-center">
+            {/* مؤشر تحميل بسيط */}
+            <div className="text-sm text-gray-500">جاري التحميل...</div>
+            <button className="ml-4 md:hidden text-gray-700 text-xl focus:outline-none" aria-hidden>
+              <i className="fas fa-bars"></i>
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu - Appears when hamburger is clicked */}
-        {isMenuOpen && (
-          <div className="md:hidden bg-white py-4 px-6 shadow-lg">
-            <div className="flex flex-col space-y-4">
-              <MobileNavLink to="/" onClick={toggleMenu}>{txtHome}</MobileNavLink>
-              <MobileNavLink to="/menu" onClick={toggleMenu}>{txtMenu}</MobileNavLink>
-              <MobileNavLink to="/aboutus" onClick={toggleMenu}>{txtAbout}</MobileNavLink>
-              <MobileNavLink to="/contact" onClick={toggleMenu}>{txtContact}</MobileNavLink>
-              <MobileNavLink to="/location" onClick={toggleMenu}>{txtLocation}</MobileNavLink>
-            </div>
-          </div>
-        )}
       </header>
-    </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <header className="sticky top-0 z-50 bg-white shadow-md">
+        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+          <div className="flex items-center">
+            <h1 className="text-xl md:text-2xl font-bold text-red-600">
+              <i className="fas fa-exclamation-triangle mr-2"></i>خطأ في التحميل
+            </h1>
+          </div>
+          <div className="flex items-center">
+            <button
+              onClick={() => window.location.reload()}
+              className="bg-amber-700 hover:bg-amber-800 text-white px-3 py-1 rounded-md"
+            >
+              إعادة المحاولة
+            </button>
+          </div>
+        </div>
+      </header>
+    );
+  }
+
+  return (
+    <header className="sticky top-0 z-50 bg-white shadow-md">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <div className="flex items-center">
+          <h1 className="text-xl md:text-2xl font-bold text-amber-700">
+            <i className="fas fa-utensils mr-2"></i>
+            {name}
+          </h1>
+        </div>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center space-x-6">
+          <NavLink to="/">{txtHome}</NavLink>
+          <NavLink to="/menu">{txtMenu}</NavLink>
+          <NavLink to="/aboutus">{txtAbout}</NavLink>
+          <NavLink to="/contact">{txtContact}</NavLink>
+          <NavLink to="/location">{txtLocation}</NavLink>
+
+          {/* زر اطلب الآن يظهر على الديسكتوب فقط */}
+          <button
+            onClick={() => goToWhatsAppLink(whatsappLink)}
+            className="ml-4 bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-lg transition text-sm md:text-base"
+            aria-label="اطلب الآن"
+          >
+            <i className="fas fa-shopping-cart mr-2"></i>
+            {txtOrder}
+          </button>
+        </nav>
+
+        {/* Mobile controls */}
+        <div className="flex items-center md:hidden">
+          {/* على الموبايل نخفي زر الطلب من الشريط ونضعه في المينيو */}
+          <button
+            className="text-gray-700 text-2xl focus:outline-none"
+            onClick={toggleMenu}
+            aria-expanded={isMenuOpen}
+            aria-label={isMenuOpen ? "إغلاق القائمة" : "فتح القائمة"}
+          >
+            <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile dropdown */}
+      <div
+        className={`md:hidden bg-white shadow-lg transform transition-transform duration-200 ease-out ${
+          isMenuOpen ? "max-h-screen" : "max-h-0 overflow-hidden"
+        }`}
+        role="menu"
+        aria-hidden={!isMenuOpen}
+      >
+        <div className="px-6 py-4 flex flex-col space-y-3">
+          <MobileNavLink to="/" onClick={closeMenu}>
+            {txtHome}
+          </MobileNavLink>
+          <MobileNavLink to="/menu" onClick={closeMenu}>
+            {txtMenu}
+          </MobileNavLink>
+          <MobileNavLink to="/aboutus" onClick={closeMenu}>
+            {txtAbout}
+          </MobileNavLink>
+          <MobileNavLink to="/contact" onClick={closeMenu}>
+            {txtContact}
+          </MobileNavLink>
+          <MobileNavLink to="/location" onClick={closeMenu}>
+            {txtLocation}
+          </MobileNavLink>
+
+          {/* زر اطلب الآن داخل الموبايل */}
+          <button
+            onClick={() => {
+              closeMenu();
+              goToWhatsAppLink(whatsappLink);
+            }}
+            className="w-full text-right bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-lg transition text-base mt-2"
+            aria-label="اطلب الآن"
+          >
+            <i className="fas fa-shopping-cart mr-2"></i>
+            {txtOrder}
+          </button>
+
+          {/* خيار عرض رقم الهاتف (لو موجود) */}
+          {data?.contact?.phone || data?.phone ? (
+            <div className="text-sm text-gray-600 pt-2">
+              <div className="font-medium">هاتف:</div>
+              <div>
+                <a
+                  href={`tel:${(data?.contact?.phone || data?.phone).replace(/\s+/g, "")}`}
+                  onClick={closeMenu}
+                  className="text-amber-700 hover:underline"
+                >
+                  {(data?.contact?.phone || data?.phone)}
+                </a>
+              </div>
+            </div>
+          ) : null}
+        </div>
+      </div>
+    </header>
   );
 }
 
-// Component for desktop links
+/* Desktop NavLink */
 const NavLink = ({ to, children }) => (
-  <Link 
-    to={to} 
-    className="text-gray-700 hover:text-amber-700 font-medium transition-colors duration-300"
-  >
+  <Link to={to} className="text-gray-700 hover:text-amber-700 font-medium transition-colors duration-300">
     {children}
   </Link>
 );
 
-// Component for mobile links
+/* Mobile NavLink */
 const MobileNavLink = ({ to, children, onClick }) => (
-  <Link 
-    to={to} 
-    className="text-gray-700 hover:text-amber-700 font-medium py-2 border-b border-gray-100"
+  <Link
+    to={to}
+    className="text-gray-700 hover:text-amber-700 font-medium py-2 border-b border-gray-100 block"
     onClick={onClick}
   >
     {children}

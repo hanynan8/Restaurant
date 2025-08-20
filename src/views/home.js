@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaCalendar, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import RestaurantLoading from '../components/loading.js'
+import '../index.css'
 
 const Home = () => {
   const [categories, setCategories] = useState([]);
@@ -92,7 +93,7 @@ const Home = () => {
                 تصفح القائمة <FaArrowLeft className="ml-2" />
               </button>
             </Link>
-            <button onClick={goToWatsapp} className="bg-white hover:bg-gray-100 text-amber-700 px-8 py-3 text-lg rounded-lg transition font-bold flex items-center">
+            <button onClick={goToWatsapp} className="one bg-white hover:bg-gray-100 text-amber-700 px-8 py-3 text-lg rounded-lg transition font-bold flex items-center">
               طلب اونلاين <FaCalendar className="ml-2" />
             </button>
           </div>
