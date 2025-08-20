@@ -86,29 +86,15 @@ function Nav() {
   }
 
   // fallbacks بسيطة عند العرض
-  const name = data?.restaurantName || data?.name || 'مطعمنا';
-  const txtHome = data?.home || 'الرئيسية';
-  const txtMenu = data?.menu || 'القائمة';
-  const txtAbout = data?.aboutUs || data?.about || 'من نحن';
-  const txtContact = data?.contactText || data?.contact || 'اتصل بنا';
-  const txtLocation = data?.location || 'الموقع';
-  const txtOrder = data?.orderOnline || data?.order || 'اطلب الآن';
+  const name = data?.restaurantName;
+  const txtHome = data?.home;
+  const txtMenu = data?.menu;
+  const txtAbout = data?.aboutUs || data?.about;
+  const txtContact = data?.contactText || data?.contact;
+  const txtLocation = data?.location;
+  const txtOrder = data?.orderOnline || data?.order;
 
-  if (loading) {
-    return (
-      <div className="nav">
-        <header className="sticky top-0 z-50 bg-white shadow-md">
-          <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div className="flex items-center">
-              <h1 className="text-xl md:text-2xl font-bold text-amber-700">
-                <i className="fas fa-utensils mr-2"></i>جاري التحميل...
-              </h1>
-            </div>
-          </div>
-        </header>
-      </div>
-    );
-  }
+
 
   if (error) {
     return (
