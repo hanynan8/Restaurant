@@ -8,7 +8,7 @@ import {
   FaChevronUp,
 } from 'react-icons/fa';
 import '../index.css'; // ستايلات إضافية (لو محتاج)
-import RestaurantLoading from '../components/loading.js'; // تأكد من المسار الصحيح
+// import RestaurantLoading from '../components/loading.js'; // تأكد من المسار الصحيح
 
 // API
 const API_URL =
@@ -106,7 +106,7 @@ const ContactPage = () => {
   };
 
   // States
-  if (loading) return <RestaurantLoading />;
+  // if (loading) return <RestaurantLoading />;
 
   if (error) {
     return (
