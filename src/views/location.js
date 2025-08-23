@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhone, FaClock, FaCar, FaTruck, FaUsers, FaTv, FaWifi, FaChild } from 'react-icons/fa';
-// import RestaurantLoading from '../components/loading.js'
+import RestaurantLoading from '../components/loading.js'
 
 
 const LocationsPage = () => {
@@ -116,13 +116,13 @@ const LocationsPage = () => {
   };
 
   // لو في تحميل نعرض الكومبوننت اللي استوردته
-  // if (loading) {
-  //   return (
-  //     <div className="min-h-screen flex items-center justify-center bg-amber-50">
-  //       <RestaurantLoading />
-  //     </div>
-  //   );
-  // }
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-amber-50">
+        <RestaurantLoading />
+      </div>
+    );
+  }
 
   // لو في خطأ نعرض رسالة بسيطة (تقدر تغيرها لاحقًا)
   if (error) {

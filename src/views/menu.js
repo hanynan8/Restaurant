@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import RestaurantLoading from '../components/loading.js'
+import RestaurantLoading from '../components/loading.js'
 
 const MenuPage = () => {
   const [activeCategory, setActiveCategory] = useState('all');
@@ -79,11 +79,11 @@ const MenuPage = () => {
     }
   };
 
-  // if (loading) {
-  //   return (
-  //     <RestaurantLoading />
-  //   );
-  // }
+  if (loading) {
+    return (
+      <RestaurantLoading />
+    );
+  }
 
   if (error) {
     return (

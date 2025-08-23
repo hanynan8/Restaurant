@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaArrowLeft, FaCalendar, FaChevronRight, FaChevronLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-// import RestaurantLoading from '../components/loading.js'
+import RestaurantLoading from '../components/loading.js'
 import '../index.css'
 
 const Home = () => {
@@ -55,11 +55,11 @@ const Home = () => {
     fetchData();
   }, []);
 
-  // if (loading) {
-  //   return (
-  //     <RestaurantLoading />
-  //   );
-  // }
+  if (loading) {
+    return (
+      <RestaurantLoading />
+    );
+  }
 
   if (error) {
     return (

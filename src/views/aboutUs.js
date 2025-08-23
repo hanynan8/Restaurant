@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaStar, FaCalendar, FaArrowLeft, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
-// import RestaurantLoading from '../components/loading.js' // تأكد أن المسار صحيح
+import RestaurantLoading from '../components/loading.js' // تأكد أن المسار صحيح
 
 /**
  * AboutPage — يجلب البيانات من API (collection=aboutus)
@@ -109,9 +109,9 @@ const AboutPage = () => {
   );
 
   // — هنا استخدمنا الـ RestaurantLoading بدل الـ skeleton المحلي —
-  // if (loading) {
-  //   return <RestaurantLoading />;
-  // }
+  if (loading) {
+    return <RestaurantLoading />;
+  }
 
   // شاشة الخطأ مع زر إعادة المحاولة
   if (error) {
